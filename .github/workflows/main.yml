@@ -1,5 +1,7 @@
 name: A workflow for my Hello World file
+
 on: push
+
 jobs:
   build:
     name: Hello world action
@@ -9,3 +11,6 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "Mona"
+      - name: Run Python script
+        uses: ./test
+        run: python test.py
